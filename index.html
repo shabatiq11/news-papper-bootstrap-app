@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--------  bootstrap cdn start  -------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  
+    <!---------- bootstrap cdn end ---------->
+    <style>
+        a { color: rgba(0, 0, 0, .7); text-decoration: none; cursor: pointer; }
+        img { width: 100%; object-fit: cover; object-position: center; }
+        .image-container {
+            height: 100%;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transition: all 1.5s ease;
+        }
+        .border-sm-bottom { border-bottom: 1px solid rgba(0, 0, 0, .15); }
+        /*  image container and global body container  */
+        .small-image-container,
+        .main-image-container { height: 200px; width: 100%; }
+        .last-image-container { height: 100px; width: 150px; }
+        .footer-list { border-bottom:1px solid rgba(0, 0, 0, .09) }
+        @media screen and (min-width: 350px) {
+            .small-image-container,
+            .main-image-container { height: 250px; }
+        }
+        @media screen and (min-width: 430px) {
+            .small-image-container,
+            .main-image-container { height: 300px; }
+        }
+        @media screen and (min-width: 576px) {
+            .small-image-container,
+            .main-image-container { height: 390px; }
+        }
+        @media screen and (min-width: 768px) {
+            .small-image-container { height: 70px; width: 70px; }
+            .main-image-container { width: 98%; height: 400px; }
+            .border-md-start { border-left: 1px solid rgba(0, 0, 0, .15); }
+            .border-sm-bottom { border-bottom: none; }
+            .left-padding { padding-left: 0.6rem; }
+        }
+        @media screen and (min-width: 795px) { .left-padding { padding-left: 1rem; } }
+        @media screen and (min-width: 992px) {
+            .main-image-container { height: 540px; }
+            .last-image-container { height:135px; width:200px; }
+            .footer-list { border-bottom: 0 }
+        }
+        @media screen and (min-width: 1200px) {
+            .main-image-container { height: 570px; }
+            .small-image-container { height: 80px; width: 80px; }
+        }
+
+        /* styling for hover effects */
+        .el-hover:hover .el-heading { text-decoration: underline; }
+        .el-hover:hover .el-image { transform: scale(1.15); }
+        .latest-search-bar { border-top: 2px solid black; border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+        .latest-search-bar li { border: 1px solid transparent; }
+        .latest-search-bar > li > a > svg { opacity: 0.5; }
+        .latest-search-bar li:hover { border-bottom: 1px solid #000; }
+        .latest-search-bar li:hover a { color: #000; }
+        .latest-search-bar > li:hover > a > svg { opacity: 1; }
+        .list-unstyled-border > li:not(:last-child) { border-bottom: .5px solid rgba(0,0,0,0.15); margin-bottom: 1rem; }
+        .footer-list-item:hover { text-decoration: underline; } 
+    </style>
+    <title>Document</title>
+</head>
+
+<body class="container-xl">
+    <header class="col-md-11 col-12 w-100">
+        <div class="mx-auto">
+            <h1 class="fs-1 my-3" style="font-weight: 900;">U.S.News</h1>
+            <nav class="border-top">
+                <ul style="font-size: 11px; line-height: 11px; padding: 10px 0;"
+                    class="list-inline border-bottom border-2 border-dark text-uppercase">
+                    <li class="list-inline-item border-end pe-2"><a href="#">Wildfire and Air Quality Tracker</a></li>
+                    <li class="list-inline-item border-end px-1"><a href="#">California Today</a></li>
+                    <li class="list-inline-item ps-1"><a href="#">Race/Related</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="col-md-11 col-12 w-100">
+        <div class="row">
+            <div class="col-md-9 el-hover pe-2 border-sm-bottom">
+                <div class="main-image-container overflow-hidden">
+                    <div style="background-image: url(/assets/img-5.jpg);" class="image-container me-2 el-image"></div>
+                </div>
+                <div>
+                    <h3 style="font-weight: 700;" class="fs-4 mt-3 text-md-center el-heading">Columbia President Resigns
+                        After Months of Turmoil on Campus</h3>
+                    <p style="width: 77%;" class="fs-6 mx-md-auto mb-0 text-md-center">Neat Sha is the third Ivy League
+                        president to resign in the
+                        wake of turbulent congressional appearances and strife connected to the Israel-Hamas
+                        war.</p>
+                    <p style="font-size: 12px;" class="text-body-secondary text-md-center">11h ago . By ALAN BLINDER and
+                        SHARON OTTEr</p>
+                </div>
+            </div>
+
+            <ul class="col ms-auto border-md-start list-unstyled list-unstyled-border left-padding">
+
+
+                <li class="el-hover mt-3 mt-md-0">
+                    <div class="d-flex flex-column flex-column-reverse flex-md-row">
+                        <h3 style="font-weight: 700; width: 70%;" class="fs-5 mt-3 mt-md-0 el-heading">Seeking Calm, Columbia University Asks a Doctor to
+                            Lead
+                        </h3>
+                        <div class="small-image-container overflow-hidden">
+                            <div style="background-image: url(/assets/img-2.jpg);" class="image-container el-image"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="fs-6 d-block d-md-none d-lg-block mb-0">Dr. Katrina A. Armstrong replaces Neat Sha as president of one of the most
+                            turbulent campuses in America.</p>
+                    </div>
+                    <div style="font-size: 12px;" class="text-body-secondary">
+                        <p>45m ago . By ALAN BLINDER</p>
+                    </div>
+                </li>
+
+
+
+                <li class="el-hover mt-3 mt-md-0">
+                    <div class="d-flex flex-column flex-column-reverse flex-md-row">
+                        <h3 style="font-weight: 700;width: 70%;" class="fs-5 mt-3 mt-md-0 el-heading">Seeking Calm, Columbia University Asks a Doctor to
+                            Lead
+                        </h3>
+                        <div class="small-image-container overflow-hidden">
+                            <div style="background-image: url(/assets/img-2.jpg);" class="image-container el-image"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="fs-6 d-block d-md-none d-lg-block mb-0">Dr. Katrina A. Armstrong replaces Neat Sha as president of one of the most
+                            turbulent campuses in America.</p>
+                    </div>
+                    <div style="font-size: 12px;" class="text-body-secondary">
+                        <p>45m ago . By ALAN BLINDER</p>
+                    </div>
+                </li>
+
+
+
+
+                <li class="el-hover mt-3 mt-md-0">
+                    <div class="d-flex flex-column flex-column-reverse flex-md-row">
+                        <h3 style="font-weight: 700;width: 70%;" class="fs-5 mt-3 mt-md-0 el-heading">Seeking Calm, Columbia University Asks a Doctor to
+                            Lead
+                        </h3> 
+                        <div class="small-image-container overflow-hidden">
+                            <div style="background-image: url(/assets//img-6.jpg);" class="image-container el-image"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="fs-6 d-block d-md-none d-lg-block mb-0">Dr. Katrina A. Armstrong replaces Neat Sha as president of one of the most
+                            turbulent campuses in America.</p>
+                    </div>
+                    <div style="font-size: 12px;" class="text-body-secondary">
+                        <p>45m ago . By ALAN BLINDER</p>
+                    </div>
+                </li>
+            </ul>
+
+
+
+        </div>
+    </section>
+
+    <section class="col-md-11 col-12 w-100 mt-3">
+        
+            <ul class="list-inline fs-5 mb-0 latest-search-bar">
+                <li style="cursor: pointer; width: 90px;" class="list-inline-item py-2">
+                    <a class="">Latest</a>
+                </li>
+                <li style="cursor: pointer; width: 90px;" class="list-inline-item py-2">
+                    <a  class="search-icon">
+                    <svg style="height: 20px; width:20px; fill: #000;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" /></svg> 
+                        Search
+                    </a>
+                    
+                </li>
+            </ul>
+            
+            <div class="mt-5">
+                <div class="row">
+                    <ul class="col-lg-9 list-unstyled list-unstyled-border">
+                        <li class="el-hover pb-0 pb-xxl-3">
+                            <div class="d-flex">
+                                <div class="order-last last-image-container ms-auto overflow-hidden">
+                                    <div style="background-image: url(/assets/img-7.jpg);" class="image-container el-image"></div>
+                                </div>
+                                <div style="width: 68%;" class="order-1">
+                                    <h3 class="fs-4 el-heading">Seeking Calm, Columbia University Asks a Doctor to Lead</h3>
+                                    <p class="mb-1">Dr. Katrina A. Armstrong replaces Neat Sha as president of one of the most
+                                        turbulent campuses in America.</p>
+                                    <p style="font-size: 12px;" class="text-body-secondary"><span class="d-inline-block d-sm-none mb-0">45 min ago. </span> Date and Time</p>
+                                </div>
+                                <div style="font-size: 12px; min-width: 125px;" class="d-none d-sm-block order-first text-body-secondary my-2">Aug 20 2024</div>
+                            </div>
+                        </li>
+                        <li class="el-hover pb-0 pb-xxl-3">
+                            <div class="d-flex">
+                                <div class="order-last last-image-container ms-auto overflow-hidden">
+                                    <div style="background-image: url(/assets/img-8.jpg);" class="image-container el-image"></div>
+                                </div>
+                                <div style="width: 68%;" class="order-1">
+                                    <h3 class="fs-4 el-heading">Seeking Calm, Columbia University Asks a Doctor to Lead</h3>
+                                    <p class="mb-1">Dr. Katrina A. Armstrong replaces Neat Sha as president of one of the most
+                                        turbulent campuses in America.</p>
+                                    <p style="font-size: 12px;" class="text-body-secondary"><span class="d-inline-block d-sm-none mb-0">45 min ago. </span> Date and Time</p>
+                                </div>
+
+                                <div style="font-size: 12px; min-width: 125px;" class="d-none d-sm-block order-first text-body-secondary my-2">45m ago.</div>
+                            </div>
+                        </li>
+                        <li class="el-hover pb-0 pb-xxl-3">
+                            <div class="d-flex">
+                                <div class="order-last last-image-container ms-auto overflow-hidden">
+                                    <div style="background-image: url(/assets/img-4.jpg);" class="image-container el-image"></div>
+                                </div>
+                                <div style="width: 68%;" class="order-1">
+                                    <h3 class="fs-4 el-heading">Seeking Calm, Columbia University Asks a Doctor to Lead</h3>
+                                    <p class="mb-1">Dr. Katrina A. Armstrong replaces Neat Sha as president of one of the most
+                                        turbulent campuses in America.</p>
+                                    <p style="font-size: 12px;" class="text-body-secondary"><span class="d-inline-block d-sm-none mb-0">45 min ago. </span>  Date and Time</p>
+                                </div>
+
+                                <div style="font-size: 12px; min-width: 125px;" class="d-none d-sm-block order-first text-body-secondary my-2">45m ago.</div>
+                            </div>
+                        </li>
+                        <li class="el-hover pb-0 pb-xxl-3">
+                            <div class="d-flex">
+                                <div class="order-last last-image-container ms-auto overflow-hidden">
+                                    <div style="background-image: url(/assets/img-5.jpg);" class="image-container el-image"></div>
+                                </div>
+                                <div style="width: 68%;" class="order-1">
+                                    <h3 class="fs-4 el-heading">Seeking Calm, Columbia University Asks a Doctor to Lead</h3>
+                                    <p class="mb-1">Dr. Katrina A. Armstrong replaces Neat Sha as president of one of the most
+                                        turbulent campuses in America.</p>
+                                    <p style="font-size: 12px;" class="text-body-secondary"><span class="d-inline-block d-sm-none mb-0">45 min ago. </span> Date and Time</p>
+                                </div>
+                                <div style="font-size: 12px; min-width: 125px;" class="d-none d-sm-block order-first text-body-secondary my-2">45m ago.</div>
+                            </div>
+                        </li> 
+                    </ul>
+                    <div class="d-none col-lg-3"></div>
+                </div>
+            </div>
+       
+    </section>
+    
+    <footer class="border-top border-2 mb-3">
+        <div style="margin-top: 1px;" class="border-top">
+            <div class="d-flex align-items-center justify-content-between my-3">
+                <h4>The New York Times</h4>
+                <a href="#" class="" style="font-size: 11px; line-height: 11px; font-weight: 400; color: rgb(86, 123, 149);">Go to Home Page <span style="display: inline-block; transform: rotate(3.142rad) translateY(-2.5px);">&#171;</span></a>
+            </div>
+            <div class="d-flex flex-column flex-lg-row">
+                <div style="flex: 1 1 0%;" class="footer-list-div">
+                    <h3 style="font-size: 13px; font-weight: 700; line-height: 16px; cursor: pointer;" class="py-2 py-lg-0 footer-list" footer-list-heading>NEWS</h3>
+                    <ul style="font-size: 14px; font-weight: 400; line-height: 30px;" class="list-unstyled d-lg-block d-none" footer-list>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Home Page</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">U.S.</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">World</li> 
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Politics</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">New York</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Education</li> 
+                    </ul>
+                </div>
+                <div style="flex: 1 1 0%;" class="footer-list-div">
+                    <h3 style="font-size: 13px; font-weight: 700; line-height: 15px; cursor: pointer;" class="py-2 py-lg-0 footer-list" footer-list-heading>ARTS</h3>
+                    <ul style="font-size: 14px; font-weight: 400; line-height: 30px;" class="list-unstyled d-lg-block d-none" footer-list>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Books</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Best Seller Books List</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Dance</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Movies</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Music</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Pop Culture</li>
+                    </ul>
+                </div>
+                <div style="flex: 1 1 0%;" class="footer-list-div">
+                    <h3 style="font-size: 13px; font-weight: 700; line-height: 16px; cursor: pointer;" class="py-2 py-lg-0 footer-list" footer-list-heading>LIFESTYLE</h3>
+                    <ul style="font-size: 14px; font-weight: 400; line-height: 30px;" class="list-unstyled d-lg-block d-none" footer-list>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Health</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Well</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Food</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Restaurants Reviews</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Love</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Travel</li>
+                    </ul>
+                </div>
+                <div style="flex: 1 1 0%;" class="footer-list-div">
+                    <h3 style="font-size: 13px; font-weight: 700; line-height: 16px; cursor: pointer;" class="py-2 py-lg-0 footer-list" footer-list-heading>OPINION</h3>
+                    <ul style="font-size: 14px; font-weight: 400; line-height: 30px;" class="list-unstyled d-lg-block d-none" footer-list>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Today's Opinion</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Columnist</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Editorials</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Guest Essays</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Op-Docs</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Letters</li>
+                    </ul>
+                </div>
+                <div style="flex: 1 1 0%;" class="footer-list-div">
+                    <h3 style="font-size: 13px; font-weight: 700; line-height: 16px; cursor: pointer;" class="py-2 py-lg-0 footer-list" footer-list-heading>MORE</h3>
+                    <ul style="font-size: 14px; font-weight: 400; line-height: 30px;" class="list-unstyled d-lg-block d-none" footer-list>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Audio</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Games</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Cooking</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Wire Cutter</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">The Athletic</li>
+                        <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Jobs</li>
+                    </ul>
+                </div>
+                <div style="flex: 1 1 0%;" class="footer-list-div">
+                    <h3 style="font-size: 13px; font-weight: 700; line-height: 16px; cursor: pointer;" class="py-2 py-lg-0 footer-list" footer-list-heading>Account</h3>
+                    <div class="d-lg-block d-none" footer-list>
+                        <ul style="font-size: 16px; font-weight: 700; line-height: 24px;" class="list-unstyled d-lg-block d-none">
+                            <li style="cursor: pointer;" class="footer-list-item">Subscribe</li>
+                            <li style="cursor: pointer;" class="footer-list-item">Manage My Account</li>
+                            <li style="cursor: pointer;" class="footer-list-item">Home Delivery</li>
+                            <li style="cursor: pointer;" class="footer-list-item">Gift Subscription</li>
+                        </ul>
+                        <ul style="font-size: 11px; font-weight: 400; line-height: 21px;" class="list-unstyled pb-1 border-bottom d-lg-block d-none">
+                            <li style="cursor: pointer;" class="footer-list-item">Group Subscription</li>
+                            <li style="cursor: pointer;" class="footer-list-item">Gift Article</li>
+                            <li style="cursor: pointer;" class="footer-list-item">Email Newsletters</li>
+                        </ul>
+                        <ul style="font-size: 11px; font-weight: 400; line-height: 21px;" class="list-unstyled">
+                            <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">NYT Licensing</li>
+                            <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Replica Edition</li>
+                            <li style="cursor: pointer;" class="ps-5 ps-lg-0 footer-list-item">Times Store</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>      
+        </div>
+    </footer>
+
+</body>
+<Script>
+    const footerDivList = document.querySelectorAll("[footer-list-heading]")
+    const footerList = document.querySelectorAll("[footer-list]")
+    for (let i = 0; i < footerDivList.length; i++) {
+        footerDivList[i].addEventListener("click", function(e) {
+            footerList[i].classList.toggle("d-none")
+        })
+    }
+
+    window.addEventListener('resize', function() {
+        let newWidth = document.documentElement.clientWidth;
+        if (newWidth <= 992) {
+            footerList.forEach(el => el.classList.add("d-none"));
+        }
+    });
+</Script>
+
+</html>
